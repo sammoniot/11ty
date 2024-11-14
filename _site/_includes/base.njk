@@ -11,11 +11,14 @@
      <meta http-equiv="X-UA-Compatible"
            content="ie=edge">
      <title>Base.njk file</title>
-     <link rel="stylesheet" href=".\11ty\11tymodel\_src\CSS\style.css">
+     <link rel="stylesheet" href=".\11ty\11ty\_src\css\style.css">
 </head>
 <body>
+{% include "layouts/top.html"%}
 <h1>My base.njk file</h1>
-    {{ content | safe }}
-
+{{ content | safe }}
+{% block footer %}
+This is the footer
+{% end block %}
 </body>
 </html>
